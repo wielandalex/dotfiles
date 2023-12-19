@@ -91,4 +91,7 @@ require("lazy").setup({
 
     -- Quick file navigation
     { "ThePrimeagen/harpoon", opts = {} },
+
+    -- Autoclose {}, (), ...
+    "Raimondi/delimitMate",
 }, {})
