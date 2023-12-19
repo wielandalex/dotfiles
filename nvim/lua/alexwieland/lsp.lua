@@ -74,6 +74,16 @@ if not vim.g.vscode then
         end
     })
 
+    vim.api.nvim_create_autocmd(
+        { "BufWritePre" },
+        {
+            pattern = { "*.go", "*.templ" },
+            callback = function()
+                vim.lsp.buf.format()
+            end,
+        }
+    )
+
     vim.filetype.add({
         extension = {
             templ = "templ",
