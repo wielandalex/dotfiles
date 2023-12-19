@@ -45,6 +45,7 @@ if not vim.g.vscode then
             },
         },
         gopls = {},
+        templ = {},
         omnisharp = {
             filetypes = { "cs", "vb", "cshtml" },
         },
@@ -71,5 +72,11 @@ if not vim.g.vscode then
                 on_attach = on_attach,
             })
         end
+    })
+
+    vim.filetype.add({
+        extension = {
+            templ = "templ",
+        },
     })
 end
