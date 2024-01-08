@@ -5,7 +5,7 @@ vim.o.relativenumber = true
 -- Automaticalliy indent
 vim.o.smartindent = true
 
--- Keep 5 lines above/below current cursor position
+-- Keep 8 lines above/below current cursor position
 vim.o.scrolloff = 8
 
 -- Search config
