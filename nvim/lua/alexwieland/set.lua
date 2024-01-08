@@ -25,3 +25,10 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
 vim.o.completeopt = "menuone,noselect"
+
+-- Wrap long lines
+vim.o.wrap = true
+vim.o.showbreak = "+++ "
+vim.o.breakat = " "
+vim.o.linebreak = true
+vim.o.breakindent = true -- Not sure yet
