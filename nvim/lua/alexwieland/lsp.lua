@@ -1,36 +1,28 @@
 if not vim.g.vscode then
     -- LSP keybindings
     local on_attach = function(_, bufnr)
-        local nmap = function(keys, func, desc)
+        local keymap = function(mode, keys, func, desc)
             if desc then
                 desc = "LSP: " .. desc
             end
 
-            vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
+            vim.keymap.set(mode, keys, func, { buffer = bufnr, desc = desc })
         end
 
-        local imap = function(keys, func, desc)
-            if desc then
-                desc = "LSP: " .. desc
-            end
+        keymap("n", "<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
+        keymap("n", "<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 
-            vim.keymap.set("i", keys, func, { buffer = bufnr, desc = desc })
-        end
+        keymap("n", "gd", vim.lsp.buf.definition, "[G]oto [D]efinition")
+        keymap("n", "gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+        keymap("n", "gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
+        keymap("n", "<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
+        keymap("n", "<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
 
-        nmap("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
-        nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
+        keymap("n", "K", vim.lsp.buf.hover, "Hover Documentation")
+        keymap("n", "<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
+        keymap("i", "<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
 
-        nmap("gd", vim.lsp.buf.definition, "[G]oto [D]efinition")
-        nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
-        nmap("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-        nmap("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
-        nmap("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
-
-        nmap("K", vim.lsp.buf.hover, "Hover Documentation")
-        nmap("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
-        imap("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
-
-        nmap("<leader><Space>f", vim.lsp.buf.format, "[F]ormat current buffer")
+        keymap("n", "<leader><leader>f", vim.lsp.buf.format, "[F]ormat current buffer")
     end
 
     -- Those language servers will be installed/configured
