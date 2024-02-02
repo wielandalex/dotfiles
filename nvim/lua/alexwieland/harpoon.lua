@@ -7,3 +7,4 @@ vim.keymap.set("n", "<leader>1", function() ui.nav_file(1) end, { desc = "Harpoo
 vim.keymap.set("n", "<leader>2", function() ui.nav_file(2) end, { desc = "Harpoon: Go to mark 2" })
 vim.keymap.set("n", "<leader>3", function() ui.nav_file(3) end, { desc = "Harpoon: Go to mark 3" })
 vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end, { desc = "Harpoon: Go to mark 4" })
+vim.keymap.set("n", "<leader>5", function() ui.nav_file(5) end, { desc = "Harpoon: Go to mark 5" })
