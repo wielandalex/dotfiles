@@ -43,6 +43,7 @@ local servers = {
     tsserver = {},
     html = {},
     cssls = {},
+    tailwindcss = {},
 }
 
 -- LSP config
@@ -78,5 +79,11 @@ vim.api.nvim_create_autocmd(
 vim.filetype.add({
     extension = {
         templ = "templ",
+    },
+})
+
+vim.filetype.add({
+    extension = {
+        tailwindcss = "cshtml"
     },
 })
