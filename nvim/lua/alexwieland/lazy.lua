@@ -94,4 +94,6 @@ require("lazy").setup({
 
     -- Autoclose {}, (), ...
     "Raimondi/delimitMate",
+
+    { "j-hui/fidget.nvim", opts = {} },
 }, {})
