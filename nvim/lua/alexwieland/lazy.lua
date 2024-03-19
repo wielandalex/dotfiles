@@ -96,4 +96,7 @@ require("lazy").setup({
     "Raimondi/delimitMate",
 
     { "j-hui/fidget.nvim", opts = {} },
+
+    -- Case preserving substitue
+    "tpope/vim-abolish",
 }, {})
