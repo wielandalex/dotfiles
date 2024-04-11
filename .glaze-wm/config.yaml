@@ -42,7 +42,7 @@ bar:
   height: "30px"
   position: "bottom"
   opacity: 1.0
-  background: "#20242cc4"
+  background: "#20242c"
   foreground: "#ffffff"
   font_family: "Segoe UI"
   font_size: "13px"
