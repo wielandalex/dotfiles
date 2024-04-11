@@ -55,6 +55,10 @@ bar:
       focused_workspace_background: "#ffffff33"
       displayed_workspace_background: "#00000033"
       default_workspace_background: "transparent"
+  components_center:
+    - type: "clock"
+      time_formatting: "ddd MMM d  HH:mm"
+      margin: "0 4px"
   components_right:
     - type: "binding mode"
       background: "#f38ba8"
@@ -81,9 +85,6 @@ bar:
       label_charging: "BAT: {battery_level}% (chg)"
       margin: "0 4px"
     - type: "system tray"
-      margin: "0 4px"
-    - type: "clock"
-      time_formatting: "ddd MMM d  HH:mm"
       margin: "0 4px"
 
 workspaces:
