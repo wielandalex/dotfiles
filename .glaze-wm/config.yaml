@@ -108,9 +108,6 @@ window_rules:
   - command: "ignore"
     match_class_name: "#32770"
 
-  - command: "ignore"
-    match_process_name: "KeePass"
-
   - command: "set floating"
     match_process_name: "ApplicationFrameHost"
     match_title: "Rechner"
