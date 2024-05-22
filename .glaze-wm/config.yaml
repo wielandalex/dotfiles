@@ -32,11 +32,11 @@ gaps:
 focus_borders:
   active:
     enabled: true
-    color: "#a6e3a1"
+    color: "#ebbcba"
 
   inactive:
-    enabled: false
-    color: "#ff0000"
+    enabled: true
+    color: "#6e6a86"
 
 bar:
   height: "30px"
