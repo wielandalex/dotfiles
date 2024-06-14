@@ -29,6 +29,9 @@ vim.o.breakat = " "
 vim.o.linebreak = true
 vim.o.breakindent = true -- Not sure yet
 
+vim.o.splitbelow = true
+vim.o.splitright = true
+
 vim.cmd.colorscheme "rose-pine"
 
 require("wielandalex.keymap")
