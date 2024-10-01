@@ -23,6 +23,12 @@ return {
     },
 
     {
+        "folke/lazydev.nvim",
+        ft = "lua",
+        config = true,
+    },
+
+    {
         "hrsh7th/nvim-cmp",
         dependencies = {
             { "L3MON4D3/LuaSnip", lazy = true },
@@ -70,6 +76,7 @@ return {
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
                     { name = "nvim_lsp_signature_help" },
+                    { name = "lazydev" },
                 }, {
                     { name = "buffer" },
                 }),
@@ -111,11 +118,7 @@ return {
             local serverOptions = {
                 lua_ls = {
                     Lua = {
-                        workspace = { checkThirdParty = false },
                         telemetry = { enable = false },
-                        diagnostics = {
-                            globals = { "vim" },
-                        },
                     },
                 },
             }
