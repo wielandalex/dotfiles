@@ -21,13 +21,14 @@ vim.keymap.set("n", "<leader>fr", require("telescope.builtin").resume, { desc = 
 vim.keymap.set("n", "<leader>ds", require("telescope.builtin").lsp_document_symbols, { desc = "Document symbols" })
 vim.keymap.set("n", "<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, { desc = "Workspace symbols" })
 
-vim.keymap.set("n", "<leader>a", require("harpoon.mark").add_file, { desc = "Harpoon: add file" })
-vim.keymap.set("n", "<C-e>", require("harpoon.ui").toggle_quick_menu, { desc = "Harpoon: open" })
-vim.keymap.set("n", "<leader>1", function() require("harpoon.ui").nav_file(1) end, { desc = "Harpoon: go to 1" })
-vim.keymap.set("n", "<leader>2", function() require("harpoon.ui").nav_file(2) end, { desc = "Harpoon: go to 2" })
-vim.keymap.set("n", "<leader>3", function() require("harpoon.ui").nav_file(3) end, { desc = "Harpoon: go to 3" })
-vim.keymap.set("n", "<leader>4", function() require("harpoon.ui").nav_file(4) end, { desc = "Harpoon: go to 4" })
-vim.keymap.set("n", "<leader>5", function() require("harpoon.ui").nav_file(5) end, { desc = "Harpoon: go to 5" })
+local harpoon = require("harpoon")
+vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end, { desc = "Harpoon: add file" })
+vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Harpoon: open" })
+vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end, { desc = "Harpoon: go to 1" })
+vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end, { desc = "Harpoon: go to 2" })
+vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end, { desc = "Harpoon: go to 3" })
+vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end, { desc = "Harpoon: go to 4" })
+vim.keymap.set("n", "<leader>5", function() harpoon:list():select(5) end, { desc = "Harpoon: go to 5" })
 
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
