@@ -32,6 +32,8 @@ vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end, { desc
 vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end, { desc = "Harpoon: go to 4" })
 vim.keymap.set("n", "<leader>5", function() harpoon:list():select(5) end, { desc = "Harpoon: go to 5" })
 
+vim.keymap.set("n", "<leader>g", "<CMD>G<CR>", { desc = "Open Git" })
+
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         vim.keymap.set("n", "K", vim.lsp.buf.hover)
