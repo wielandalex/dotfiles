@@ -17,6 +17,9 @@ return {
                     "templ",
                     "tsserver",
                     "gopls",
+                    "jsonls",
+                    "yamlls",
+                    "dockerls",
                 },
             })
         end,
