@@ -15,7 +15,6 @@ vim.keymap.set("n", "<leader>f/", require("telescope.builtin").current_buffer_fu
 vim.keymap.set("n", "<leader>f?", require("telescope.builtin").oldfiles, { desc = "Find in current buffer" })
 vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, { desc = "Find open buffers" })
 vim.keymap.set("n", "<leader>fc", require("telescope.builtin").git_commits, { desc = "Find git commits" })
-vim.keymap.set("n", "<leader>fd", require("telescope.builtin").diagnostics, { desc = "Find diagnostics" })
 vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, { desc = "Find files" })
 vim.keymap.set("n", "<leader>fF", require("telescope.builtin").git_files, { desc = "Find git Files" })
 vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, { desc = "Find live grep" })
@@ -31,6 +30,8 @@ vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end, { desc
 vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end, { desc = "Harpoon: go to 3" })
 vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end, { desc = "Harpoon: go to 4" })
 vim.keymap.set("n", "<leader>5", function() harpoon:list():select(5) end, { desc = "Harpoon: go to 5" })
+
+vim.keymap.set("n", "<leader>fd", function() require("trouble").toggle("diagnostics") end, { desc = "Find diagnostics" })
 
 vim.keymap.set("n", "<leader>g", "<CMD>G<CR>", { desc = "Open Git" })
 
