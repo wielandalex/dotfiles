@@ -24,4 +24,5 @@ sudo ln -s $PWD/xorg.conf.d/10-keyboard.conf /etc/X11/xorg.conf.d/10-keyboard.co
 sudo ln -s $PWD/xorg.conf.d/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 
 ln -s $PWD/.zshrc ~/.zshrc
+ln -s $PWD/.zshenv ~/.zshenv
 ```
