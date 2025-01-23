@@ -35,6 +35,7 @@ return {
                 { name = "nvim_lsp_signature_help" },
                 { name = "luasnip" },
                 { name = "lazydev" },
+                { name = "path" },
             }, {
                 { name = "buffer" },
             }),
