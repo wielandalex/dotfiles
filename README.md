@@ -25,3 +25,7 @@ ln -s $PWD/tmux ~/.config/tmux
 ln -s $PWD/waybar ~/.config/waybar
 ln -s $PWD/.zshrc ~/.zshrc
 ```
+
+## Wallpaper
+
+https://unsplash.com/de/fotos/ein-grosses-gewasser-mit-einem-boot-in-der-ferne-EzXchn20N-I
