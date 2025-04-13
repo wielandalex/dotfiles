@@ -1,28 +1,27 @@
 # dotfiles
 
-## i3 supporting programs
+## Prerequisites
 
-- blueman - Bluetooth manager
-- brightnessctl - Brightness control
-- nm-applet - Network manager
-- pactl - Volume control
-- rofi - Program launcher
+- Cantarell font
+- [Rose Pine GTK3 Theme](https://github.com/rose-pine/gtk)
+- [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
+
+### Install packages
+
+```
+blueman brightnessctl foot nm-applet nvim pactl pavucontrol rofi sway swaylock tmux waybar
+```
 
 ## Symlinks
 
 ```sh
-ln -s $PWD/i3 ~/.config/i3
-ln -s $PWD/i3status ~/.config/i3status
-
-ln -s $PWD/kitty ~/.config/kitty
-
+ln -s $PWD/foot ~/.config/foot
+ln -s $PWD/gtk-3.0 ~/.config/gtk-3.0
 ln -s $PWD/nvim ~/.config/nvim
-
 ln -s $PWD/rofi ~/.config/rofi
-
-sudo ln -s $PWD/xorg.conf.d/10-keyboard.conf /etc/X11/xorg.conf.d/10-keyboard.conf
-sudo ln -s $PWD/xorg.conf.d/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
-
+ln -s $PWD/sway ~/.config/sway
+ln -s $PWD/swaylock ~/.config/swaylock
+ln -s $PWD/tmux ~/.config/tmux
+ln -s $PWD/waybar ~/.config/waybar
 ln -s $PWD/.zshrc ~/.zshrc
-ln -s $PWD/.zshenv ~/.zshenv
 ```
