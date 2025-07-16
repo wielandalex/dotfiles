@@ -7,21 +7,7 @@ return {
     },
     config = function()
         require("mason").setup()
-        require("mason-lspconfig").setup({
-            ensure_installed = {
-                "cssls",
-                "dockerls",
-                "gopls",
-                "html",
-                "jsonls",
-                "lua_ls",
-                "omnisharp",
-                "tailwindcss",
-                "templ",
-                "ts_ls",
-                "yamlls",
-            },
-        })
+        require("mason-lspconfig").setup()
 
         local server_options = {
             lua_ls = {

@@ -4,5 +4,8 @@ return {
     priority = 1000,
     opts = {
         dim_inactive_windows = true,
+        styles = {
+            italic = false,
+        },
     },
 }
