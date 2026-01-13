@@ -16,7 +16,7 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
 vim.keymap.set("n", "<leader>fF", builtin.git_files, { desc = "Find Git files" })
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Find with grep" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
-vim.keymap.set("n", "<leader>fr", builtin.help_tags, { desc = "Resume find" })
+vim.keymap.set("n", "<leader>fr", builtin.resume, { desc = "Resume find" })
 vim.keymap.set("n", "<leader>f/", builtin.current_buffer_fuzzy_find, { desc = "Find in current buffer" })
 vim.keymap.set("n", "<leader>f?", builtin.oldfiles, { desc = "Find previous files" })
 

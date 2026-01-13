@@ -26,7 +26,7 @@ vim.o.clipboard = "unnamedplus"
 
 require("config.lazy")
 
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme tokyonight")
 
 require("config.keymap")
 require("config.format_on_save")
