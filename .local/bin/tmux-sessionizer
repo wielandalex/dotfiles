@@ -1,0 +1,37 @@
+#!/bin/bash
+
+active_sessions=$(tmux ls -F "#{session_name}")
+session_name=$(echo -e "new\n$active_sessions" | fzf --accept-nth 1)
+
+if [[ -z $session_name ]]; then
+    exit 0
+fi
+
+if [[ $session_name == "new" ]]; then
+    read -p "Enter name of new session: " session_name
+
+    if [[ -z $session_name ]]; then
+        echo "name must not be empty"
+        exit 1
+    fi
+
+    echo -ne "\033]30;$session_name\007"
+
+    if [[ -n $TMUX ]]; then
+        tmux new -s $session_name -d
+        tmux switchc -t $session_name
+    else
+        tmux new -s $session_name
+    fi
+else
+    echo -ne "\033]30;$session_name\007"
+
+    if [[ -n $TMUX ]]; then
+        tmux switchc -t $session_name
+    else
+        tmux attach -t $session_name
+    fi
+fi
+
+echo -ne "\033]30;\007"
+

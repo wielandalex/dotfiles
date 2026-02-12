@@ -40,9 +40,13 @@ return {
                 { name = "buffer" },
             }),
             formatting = {
-                fields = { "kind", "abbr", "menu" },
+                fields = { "abbr", "icon", "kind", "menu" },
                 format = require("lspkind").cmp_format({
-                    mode = "symbol",
+                    maxwidth = {
+                        menu = 50,
+                        abbr = 50,
+                    },
+                    ellipsis_char = "...",
                 }),
             },
         })
