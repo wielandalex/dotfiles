@@ -2,7 +2,7 @@
 
 ## Symlinks
 
-```console
+```bash
 ln -s $PWD/.bash_profile ~/.bash_profile
 ln -s $PWD/.bashrc ~/.bashrc
 ln -s $PWD/.inputrc ~/.inputrc
@@ -25,7 +25,7 @@ ln -s $PWD/tmux ~/.config/tmux
 
 ## GNOME Settings
 
-```console
+```bash
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted_capslock']"
 
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
