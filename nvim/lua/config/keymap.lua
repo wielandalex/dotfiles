@@ -33,18 +33,8 @@ vim.keymap.set("n", "<leader>5", function() harpoon:list():select(5) end, { desc
 --- LSP
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
-        vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help)
-
-        vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = args.buf, desc = "Rename symbol" })
-        vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = args.buf, desc = "Code action" })
-
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = args.buf, desc = "Go to definition" })
-        vim.keymap.set("n", "gI", vim.lsp.buf.implementation, { buffer = args.buf, desc = "Go to implementation" })
-        vim.keymap.set("n", "gr", builtin.lsp_references, { buffer = args.buf, desc = "List references" })
-
-        vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float,
-            { buffer = args.buf, desc = "View diagnostics of current line" })
-
+        vim.keymap.set("n", "grd", vim.lsp.buf.definition, { buffer = args.buf, desc = "Go to definition" })
+        vim.keymap.set("n", "grr", builtin.lsp_references, { buffer = args.buf, desc = "List references" })
         vim.keymap.set("n", "<leader><leader>f", vim.lsp.buf.format, { buffer = args.buf, desc = "Format" })
     end,
 })

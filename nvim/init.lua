@@ -21,8 +21,13 @@ vim.o.smartcase = true
 
 vim.o.undofile = true
 
--- TODO: remove if not happy
-vim.o.clipboard = "unnamedplus"
+vim.o.winborder = "rounded"
+
+vim.diagnostic.config({
+    virtual_lines = {
+        current_line = true,
+    },
+})
 
 require("config.lazy")
 
